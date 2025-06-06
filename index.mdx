@@ -1,0 +1,87 @@
+---
+title: "Basic Memory"
+description: "A local-first knowledge management system that creates persistent semantic graphs from AI conversations"
+---
+
+Basic Memory helps you get control of your knowledge using LLMs. All knowledge is stored in standard Markdown files on your computer, giving you full control and
+ownership of your data.
+
+Basic Memory connects you and AI assistants through shared knowledge:
+
+1. **Captures knowledge** from natural conversations with AI assistants
+2. **Structures information** using simple semantic patterns in Markdown
+3. **Enables knowledge reuse** across different conversations and sessions
+4. **Maintains persistence** through local files you control completely
+
+Both you and AI assistants like Claude can read from and write to the same knowledge base, creating a continuous
+learning environment where each conversation builds upon previous ones.
+
+## Pick up your conversation right where you left off
+
+- AI assistants can load context from local files in a new conversation
+- Notes are saved locally as Markdown files in real time
+- No project knowledge or special prompting required
+
+<video controls>
+  <source src="/attachments/Claude-Obsidian-Demo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+Basic Memory uses:
+
+- **Files as the source of truth** - Everything is stored in plain Markdown files
+- **Git-compatible storage** - All knowledge can be versioned, branched, and merged
+- **Local SQLite database** - For fast indexing and searching only (not primary storage)
+- **Model Context Protocol (MCP)** - For seamless AI assistant integration
+
+## Complete control over your knowledge
+
+<CardGroup cols={2}>
+  <Card title="Local-first storage" icon="hard-drive">
+    All knowledge lives on your computer
+  </Card>
+  <Card title="Standard file formats" icon="file-text">
+    Plain Markdown compatible with any editor
+  </Card>
+  <Card title="Directory organization" icon="folder">
+    Knowledge stored in `~/basic-memory` by default
+  </Card>
+  <Card title="Version control ready" icon="git-branch-plus">
+    Use git for history, branching, and collaboration
+  </Card>
+</CardGroup>
+
+Changes to files automatically sync with the knowledge graph, and AI assistants can see your edits in conversations.
+
+## Get Started
+
+<CardGroup cols={2}>
+  <Card
+    title="Installation Guide"
+    icon="rocket"
+    href="/getting-started"
+  >
+    Install Basic Memory and configure it with your AI assistant
+  </Card>
+  <Card
+    title="User Guide"
+    icon="book"
+    href="/user-guide"
+  >
+    Comprehensive usage instructions and workflows
+  </Card>
+  <Card
+    title="Knowledge Format"
+    icon="file-text"
+    href="/guides/knowledge-format"
+  >
+    Learn how to structure knowledge with semantic patterns
+  </Card>
+  <Card
+    title="AI Assistant Guide"
+    icon="brain"
+    href="/guides/ai-assistant-guide"
+  >
+    Reference for AI assistants using Basic Memory
+  </Card>
+</CardGroup>

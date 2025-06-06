@@ -1,0 +1,106 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Basic Memory",
+  "description": "Local-first knowledge management with AI conversations",
+  "theme": "mint",
+  "colors": {
+    "primary": "#000000",
+    "light": "#374151",
+    "dark": "#111827"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/attachments/logo-light.png",
+    "dark": "/attachments/logo-dark.png",
+    "href": "https://basicmachines.co"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/basicmachines-co/basic-memory"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://docs.basicmemory.com/getting-started"
+    }
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Basic Machines",
+          "icon": "globe",
+          "href": "https://basicmemory.com"
+        },
+        {
+          "anchor": "GitHub",
+          "icon": "github",
+          "href": "https://github.com/basicmachines-co/basic-memory"
+        },
+        {
+          "anchor": "Discord",
+          "icon": "discord",
+          "href": "https://discord.gg/UqQHDAGMrq"
+        },
+        {
+          "anchor": "Reddit",
+          "icon": "reddit",
+          "href": "https://www.reddit.com/r/basicmemory"
+        },
+        {
+          "anchor": "PyPI",
+          "icon": "python", 
+          "href": "https://pypi.org/project/basic-memory/"
+        }
+      ]
+    },
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "index",
+          "getting-started",
+          "user-guide"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/knowledge-format",
+          "guides/canvas",
+          "guides/cli-reference",
+          "guides/ai-assistant-guide"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/claude-ai",
+          "integrations/obsidian",
+          "integrations/oauth-setup"
+        ]
+      },
+      {
+        "group": "Technical",
+        "pages": [
+          "technical/technical-information"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://basicmemory.com",
+      "github": "https://github.com/basicmachines-co/basic-memory",
+      "discord": "https://discord.gg/UqQHDAGMrq",
+      "reddit": "https://www.reddit.com/r/basicmemory/",
+      "x": "https://x.com/basic_memory"
+    }
+  }
+}
