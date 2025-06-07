@@ -215,18 +215,6 @@ In a Claude Code session, let Claude know he can use the basic-memory tools, the
 echo "# Test Note from Claude\n\nThis is a test note created by Claude to test the stdin functionality." | basic-memory tool write-note --title "Claude Test Note" --folder "test" --tags "test" --tags "claude"
 ```
 
-### MCP
-
-Claude code can also now use mcp tools, so it can use any of the basic-memory tool natively. To install basic-memory in Claude Code:
-
-```bash
-claude mcp add basic-memory basic-memory mcp
-```
-
-<Info>
-You can then use the `/mcp` command in the REPL to check MCP server status and interact with Basic Memory tools directly.
-</Info>
-
 
 ```bash
 # Stable releases
@@ -241,18 +229,6 @@ pip install basic-memory --pre --force-reinstall
 # Check current version
 basic-memory --version
 ```
-
-<CardGroup cols={3}>
-<Card title="Stable" icon="check">
-`0.13.0` (manual git tags)
-</Card>
-<Card title="Beta" icon="flask">
-`0.13.0b1` (manual git tags)
-</Card>
-<Card title="Development" icon="code">
-`0.12.4.dev26+468a22f` (automatic from commits)
-</Card>
-</CardGroup>
 
 ## Troubleshooting Common Issues
 

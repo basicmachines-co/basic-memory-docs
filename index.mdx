@@ -1,87 +1,175 @@
 ---
 title: "Basic Memory"
-description: "A local-first knowledge management system that creates persistent semantic graphs from AI conversations"
+description: "AI and humans working together to build knowledge that gets smarter over time"
 ---
 
-Basic Memory helps you get control of your knowledge using LLMs. All knowledge is stored in standard Markdown files on your computer, giving you full control and
-ownership of your data.
+Basic Memory transforms how you work with AI - instead of losing valuable insights in conversation history, you build a persistent knowledge base where both you and AI can read, write, and enhance each other's work.
 
-Basic Memory connects you and AI assistants through shared knowledge:
+## True AI Collaboration
 
-1. **Captures knowledge** from natural conversations with AI assistants
-2. **Structures information** using simple semantic patterns in Markdown
-3. **Enables knowledge reuse** across different conversations and sessions
-4. **Maintains persistence** through local files you control completely
+Unlike typical AI tools where you ask questions and get answers, Basic Memory creates **genuine collaboration**:
 
-Both you and AI assistants like Claude can read from and write to the same knowledge base, creating a continuous
-learning environment where each conversation builds upon previous ones.
+- **You capture ideas quickly** → **AI structures and enhances them**
+- **AI creates comprehensive research** → **You add personal insights and connections**  
+- **Both build on each other's work** → **Knowledge grows smarter over time**
 
-## Pick up your conversation right where you left off
-
-- AI assistants can load context from local files in a new conversation
-- Notes are saved locally as Markdown files in real time
-- No project knowledge or special prompting required
+Every note becomes part of a **semantic knowledge graph** that reveals connections you never would have seen otherwise.
 
 <video controls>
   <source src="/attachments/Claude-Obsidian-Demo.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
-Basic Memory uses:
+## Pick up conversations exactly where you left off
 
-- **Files as the source of truth** - Everything is stored in plain Markdown files
-- **Git-compatible storage** - All knowledge can be versioned, branched, and merged
-- **Local SQLite database** - For fast indexing and searching only (not primary storage)
-- **Model Context Protocol (MCP)** - For seamless AI assistant integration
+```
+You: "Continue our discussion about the database architecture"
 
-## Complete control over your knowledge
+AI: [Loads relevant context from your knowledge base]
+"Based on our previous conversations and your notes about performance requirements, 
+I see we were exploring PostgreSQL vs. MongoDB. Looking at your updated benchmarking 
+results from last week..."
+```
+
+No more "Can you remind me what we discussed?" or "Here's what I learned before..." - AI assistants access your **entire knowledge history** instantly.
+
+## Knowledge that compounds
+
+### Beyond Chat Summaries
+Basic Memory doesn't just save chat snippets - AI creates **comprehensive, detailed notes** that connect to everything you've learned before:
+
+- **2,000+ word research documents** instead of brief summaries
+- **Technical deep-dives** that build on previous architecture decisions  
+- **Creative project notes** that track character development and plot evolution
+- **Personal reflections** that reveal life patterns and growth over time
+
+### Semantic Connections
+Every piece of knowledge is semantically tagged and related:
+
+```markdown
+## Neural Networks Research
+- [breakthrough] Transformer architecture revolutionized NLP #architecture
+- [application] Enables large language models like GPT and Claude #llm
+- [limitation] Computational requirements limit accessibility #resource-constraint
+
+## Relations
+- builds_on [[Artificial Intelligence History]]
+- enables [[Modern AI Applications]]  
+- influences [[AI Ethics Considerations]]
+```
+
+The knowledge graph **automatically suggests connections** across domains - your AI research might connect to philosophy notes, which link to creative writing projects.
+
+## Your Knowledge, Your Control
 
 <CardGroup cols={2}>
   <Card title="Local-first storage" icon="hard-drive">
-    All knowledge lives on your computer
+    All knowledge lives on your computer in plain Markdown files
   </Card>
   <Card title="Standard file formats" icon="file-text">
-    Plain Markdown compatible with any editor
+    Compatible with any editor, future-proof and portable
   </Card>
-  <Card title="Directory organization" icon="folder">
-    Knowledge stored in `~/basic-memory` by default
+  <Card title="Real-time collaboration" icon="users">
+    You and AI work together, seeing each other's changes instantly
   </Card>
   <Card title="Version control ready" icon="git-branch-plus">
-    Use git for history, branching, and collaboration
+    Use git for history, branching, and team collaboration
   </Card>
 </CardGroup>
 
-Changes to files automatically sync with the knowledge graph, and AI assistants can see your edits in conversations.
+## Versatile Knowledge Building
+
+Basic Memory adapts to how **you** think and work:
+
+<CardGroup cols={2}>
+  <Card title="Code Projects" icon="code" href="/how-to/project-documentation">
+    Living documentation that evolves with your codebase
+  </Card>
+  <Card title="Creative Writing" icon="pen-tool" href="/how-to/writing-organization">
+    Track characters, plots, and research for novels and screenplays  
+  </Card>
+  <Card title="Research & Learning" icon="book" href="/how-to/research-learning">
+    Build comprehensive knowledge from papers, books, and courses
+  </Card>
+  <Card title="Personal Growth" icon="brain" href="/how-to/personal-knowledge">
+    Connect goals, relationships, and life experiences
+  </Card>
+</CardGroup>
+
+## Real-Time Knowledge Flow
+
+**Morning research session:**
+```
+You: "Research quantum computing applications in cryptography"
+AI: [Creates detailed 3,000-word analysis with technical details, 
+     current research, and connections to your existing crypto notes]
+```
+
+**Afternoon development work:**
+```  
+You: "Document the authentication system we just built"
+AI: [Reads your code, connects to security best practices from your 
+     knowledge base, creates comprehensive API documentation]
+```
+
+**Evening reflection:**
+```
+You: "Add today's insights to my learning journal"  
+AI: [Reviews day's knowledge creation, identifies patterns,
+     connects to personal growth goals and career development]
+```
+
+Each interaction **builds on everything before it** - creating knowledge that gets more valuable over time.
+
+## Designed for Collaboration
+
+Basic Memory implements the **Model Context Protocol (MCP)**, enabling direct integration with AI assistants. This isn't just file sharing - it's real-time collaborative access where both you and AI can read, write, search, and manage your knowledge base through natural conversation.
+
+### AI Integration
+- **Claude Desktop** - View, edit, and manage your notes directly through chat. Ask Claude to create notes, search your knowledge, or display notes as formatted artifacts
+- **Claude Code** - Persistent context across development sessions with full MCP tool access  
+- **Cursor** - AI-powered coding with project memory and native MCP support
+- **VS Code** - Code editing with real-time sync to knowledge graph
+
+### Human-Friendly
+- **Plain Markdown files** you can edit in any text editor
+- **Folder organization** that matches how you think
+- **Git compatibility** for version control and team sharing
+- **Search and discovery** across your entire knowledge base
 
 ## Get Started
 
 <CardGroup cols={2}>
   <Card
-    title="Installation Guide"
+    title="Quick Setup"
     icon="rocket"
     href="/getting-started"
   >
-    Install Basic Memory and configure it with your AI assistant
+    Install and configure with your favorite AI assistant
   </Card>
   <Card
-    title="User Guide"
-    icon="book"
-    href="/user-guide"
+    title="How to Use"
+    icon="map"
+    href="/user-guide" 
   >
-    Comprehensive usage instructions and workflows
+    Complete guide to building your knowledge system
   </Card>
   <Card
-    title="Knowledge Format"
+    title="Integration Guides"
+    icon="puzzle"
+    href="/integrations/claude-desktop"
+  >
+    Set up with Claude Desktop, Cursor, VS Code, and more
+  </Card>
+  <Card
+    title="Knowledge Format" 
     icon="file-text"
     href="/guides/knowledge-format"
   >
-    Learn how to structure knowledge with semantic patterns
-  </Card>
-  <Card
-    title="AI Assistant Guide"
-    icon="brain"
-    href="/guides/ai-assistant-guide"
-  >
-    Reference for AI assistants using Basic Memory
+    Learn the semantic patterns that make knowledge searchable
   </Card>
 </CardGroup>
+
+---
+
+**Basic Memory**: Where AI and human intelligence combine to create knowledge that's greater than the sum of its parts.

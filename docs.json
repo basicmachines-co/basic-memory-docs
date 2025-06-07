@@ -81,9 +81,21 @@
       {
         "group": "Integrations",
         "pages": [
-          "integrations/claude-ai",
-          "integrations/obsidian",
-          "integrations/oauth-setup"
+          "integrations/claude-desktop",
+          "integrations/claude-code",
+          "integrations/cursor",
+          "integrations/vscode",
+          "integrations/obsidian"
+        ]
+      },
+      {
+        "group": "How you can use Basic Memory",
+        "pages": [
+          "how-to/project-documentation",
+          "how-to/writing-organization",
+          "how-to/research-learning",
+          "how-to/note-taking",
+          "how-to/personal-knowledge"
         ]
       },
       {
