@@ -79,6 +79,7 @@
         "group": "Guides",
         "pages": [
           "guides/knowledge-format",
+          "guides/mcp-tools-reference",
           "guides/canvas",
           "guides/cli-reference",
           "guides/ai-assistant-guide"
