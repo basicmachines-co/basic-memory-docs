@@ -70,6 +70,12 @@
         ]
       },
       {
+        "group": "What's New",
+        "pages": [
+          "whats-new"
+        ]
+      },
+      {
         "group": "Guides",
         "pages": [
           "guides/knowledge-format",
