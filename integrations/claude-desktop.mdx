@@ -14,22 +14,13 @@ Claude Desktop is the recommended way to use Basic Memory. It provides seamless 
 - **On macOS, install `uv` globally with Homebrew**: `brew install uv`. This ensures Claude Desktop can detect it.
 </Info>
 
-### 1. Install Basic Memory
+### Configure Claude Desktop
 
-```bash
-# Stable release (recommended)
-uv tool install basic-memory
+Edit your Claude Desktop config, located at:
 
-# Beta releases (new features, testing)
-pip install basic-memory --pre
-```
+- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
-### 2. Configure Claude Desktop
-
-Edit your Claude Desktop config file:
-
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -45,7 +36,21 @@ Edit your Claude Desktop config file:
 }
 ```
 
-### 3. Restart Claude Desktop
+### Install Basic Memory (Optional)
+
+```bash
+# Stable release (recommended)
+uv tool install basic-memory
+# or: pip install basic-memory
+
+# Beta releases (new features, testing)
+pip install basic-memory --pre
+
+# Development builds (latest changes)
+pip install basic-memory --pre --force-reinstall
+```
+
+### Restart Claude Desktop
 
 After saving the config, restart Claude Desktop. You should see Basic Memory tools available in the tools menu (hammer icon in bottom-right).
 

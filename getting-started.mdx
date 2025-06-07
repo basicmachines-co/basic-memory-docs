@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Install Basic Memory, configure it with Claude Desktop, and create your first knowledge notes"
+description: "Install Basic Memory, configure it with your AI assistant, and create your first knowledge notes"
 ---
 
 Basic Memory works through the Model Context Protocol (MCP) to connect with AI assistants like Claude. Here's how to set it up.
@@ -19,27 +19,7 @@ The easiest way to install basic memory is via `uv`. See the [uv installation gu
 - **On macOS, it is recommended to install `uv` globally with Homebrew** so that Claude Desktop will detect it: `brew install uv`. Installing `uv` with other methods may not make it accessible to Claude Desktop.
 </Warning>
 
-### 1. Install Basic Memory
-
-```bash
-# Stable release (recommended)
-uv tool install basic-memory
-# or: pip install basic-memory
-
-# Beta releases (new features, testing)
-pip install basic-memory --pre
-
-# Development builds (latest changes)
-pip install basic-memory --pre --force-reinstall
-```
-
-<Info>
-**Important**: You need to install Basic Memory using one of the commands above to use the command line tools.
-</Info>
-
-Using `uv tool install` will install the basic-memory package in a standalone virtual environment. See the [UV docs](https://docs.astral.sh/uv/concepts/tools/) for more info.
-
-### 2. Configure Claude Desktop
+### Configure Claude Desktop
 
 Edit your Claude Desktop config, located at:
 
@@ -65,45 +45,28 @@ Edit your Claude Desktop config, located at:
 
 ![tools-menu](/attachments/claude-tools-menu.png)
 
-#### Fix Path to uv
-
-If you get an error that says `ENOENT` , this most likely means Claude Desktop could not find your `uv` installation. Make sure that you have `uv` installed per the instructions above, then:
-
-**Step 1: Find the absolute path to uvx**
-
-Open Terminal and run:
+### Install Basic Memory (Optional)
 
 ```bash
-which uvx
+# Stable release (recommended)
+uv tool install basic-memory
+# or: pip install basic-memory
+
+# Beta releases (new features, testing)
+pip install basic-memory --pre
+
+# Development builds (latest changes)
+pip install basic-memory --pre --force-reinstall
 ```
 
-This will show you the full path (e.g., `/Users/yourusername/.cargo/bin/uvx`).
+<Info>
+**Important**: You need to install Basic Memory using one of the commands above to use the command line tools, like import.
+</Info>
 
-**Step 2: Edit Claude Desktop Configuration**
+Using `uv tool install` will install the basic-memory package in a standalone virtual environment. See the [UV docs](https://docs.astral.sh/uv/concepts/tools/) for more info.
 
-Edit the Claude Desktop config:
 
-```json
-{
-  "mcpServers": {
-    "basic-memory": {
-      "command": "/absolute/path/to/uvx",
-      "args": [
-        "basic-memory",
-        "mcp"
-      ]
-    }
-  }
-}
-```
-
-Replace `/absolute/path/to/uvx` with the actual path you found in Step 1.
-
-**Step 3: Restart Claude Desktop**
-
-Close and reopen Claude Desktop for the changes to take effect.
-
-### 3. Sync changes in real time
+### Sync changes in real time
 
 <Note>
 The service will sync changes from your project directory in real time so they available for the AI assistant. 
@@ -111,42 +74,7 @@ The service will sync changes from your project directory in real time so they a
 To disable realtime sync, you can update the config. See [CLI Reference - sync](/guides/cli-reference#sync).
 </Note>
 
-### 4. Staying Updated
-
-To update Basic Memory when new versions are released:
-
-```bash
-# Update stable release
-uv tool upgrade basic-memory 
-# or: pip install --upgrade basic-memory
-
-# Update to latest beta
-pip install --upgrade basic-memory --pre
-
-# Get latest development build
-pip install --upgrade basic-memory --pre --force-reinstall
-```
-
-<CardGroup cols={2}>
-  <Card title="Fluid project switching" icon="shuffle">
-    Switch between projects during conversations
-  </Card>
-  <Card title="Advanced note editing" icon="edit">
-    Edit notes incrementally without rewriting
-  </Card>
-  <Card title="Smart file management" icon="folder-tree">
-    Move and organize notes with database consistency
-  </Card>
-  <Card title="Enhanced search" icon="magnifying-glass">
-    Search with frontmatter tag support
-  </Card>
-</CardGroup>
-
-<Note>
-After updating, restart Claude Desktop for changes to take effect. No sync restart needed in v0.13.0.
-</Note>
-
-### 5. Multi-Project Setup
+### Multi-Project Setup
 
 By default, Basic Memory creates a project in `~/basic-memory`. You can switch between projects using tools via the LLM.
 
@@ -171,26 +99,6 @@ Switch to a project and make it active.
 set the default project to "work notes"
 ```
 Set the default project used at startup.
-
-## Troubleshooting Installation
-
-### Common Issues
-
-#### Claude Says "No Basic Memory Tools Available"
-
-If Claude cannot find Basic Memory tools:
-
-1. **Check absolute paths**: Ensure you're using complete absolute paths to uvx in the Claude Desktop configuration
-2. **Verify installation**: Run `basic-memory --version` in Terminal to confirm Basic Memory is installed
-3. **Restart applications**: Restart both Terminal and Claude Desktop after making configuration changes
-4. **Check sync status**: You can view the sync status by running `basic-memory status`
-
-#### Permission Issues
-
-If you encounter permission errors:
-
-1. Check that Basic Memory has access to create files in your home directory
-2. Ensure Claude Desktop has permission to execute the uvx command
 
 ## Creating Your First Knowledge Note
 
@@ -219,17 +127,16 @@ If you encounter permission errors:
    permalink: coffee-brewing-methods
    tags: [coffee, brewing, equipment]  # v0.13.0: Now searchable!
    ---
-   
+
    # Coffee Brewing Methods
-   
+
    ## Observations
    - [method] Pour over provides more clarity...
    - [technique] Water temperature at 205°F...
-   
+
    ## Relations
    - relates_to [[Other Coffee Topics]]
    ```
-
 ## Using Special Prompts
 
 Basic Memory includes special prompts that help you start conversations with context from your knowledge base:
@@ -373,3 +280,94 @@ After getting started, explore these areas:
     Secure remote access (v0.13.0)
   </Card>
 </CardGroup>
+
+### Staying Updated
+
+To update Basic Memory when new versions are released:
+
+```bash
+# Update stable release
+uv tool upgrade basic-memory
+# or: pip install --upgrade basic-memory
+
+# Update to latest beta
+pip install --upgrade basic-memory --pre
+
+# Get latest development build
+pip install --upgrade basic-memory --pre --force-reinstall
+```
+
+<CardGroup cols={2}>
+  <Card title="Fluid project switching" icon="shuffle">
+    Switch between projects during conversations
+  </Card>
+  <Card title="Advanced note editing" icon="edit">
+    Edit notes incrementally without rewriting
+  </Card>
+  <Card title="Smart file management" icon="folder-tree">
+    Move and organize notes with database consistency
+  </Card>
+  <Card title="Enhanced search" icon="magnifying-glass">
+    Search with frontmatter tag support
+  </Card>
+</CardGroup>
+
+<Note>
+After updating, restart Claude Desktop for changes to take effect. No sync restart needed in v0.13.0.
+</Note>
+
+## Troubleshooting Installation
+
+### Fix Path to uv
+
+If you get an error that says `ENOENT` , this most likely means Claude Desktop could not find your `uv` installation. Make sure that you have `uv` installed per the instructions above, then:
+
+**Step 1: Find the absolute path to uvx**
+
+Open Terminal and run:
+
+```bash
+which uvx
+```
+
+This will show you the full path (e.g., `/Users/yourusername/.cargo/bin/uvx`).
+
+**Step 2: Edit Claude Desktop Configuration**
+
+Edit the Claude Desktop config:
+
+```json
+{
+  "mcpServers": {
+    "basic-memory": {
+      "command": "/absolute/path/to/uvx",
+      "args": [
+        "basic-memory",
+        "mcp"
+      ]
+    }
+  }
+}
+```
+
+Replace `/absolute/path/to/uvx` with the actual path you found in Step 1.
+
+**Step 3: Restart Claude Desktop**
+
+Close and reopen Claude Desktop for the changes to take effect.
+
+### Claude Says "No Basic Memory Tools Available"
+
+If Claude cannot find Basic Memory tools:
+
+1. **Check absolute paths**: Ensure you're using complete absolute paths to uvx in the Claude Desktop configuration
+2. **Verify installation**: Run `basic-memory --version` in Terminal to confirm Basic Memory is installed
+3. **Restart applications**: Restart both Terminal and Claude Desktop after making configuration changes
+4. **Check sync status**: You can view the sync status by running `basic-memory status`
+
+### Permission Issues
+
+If you encounter permission errors:
+
+1. Check that Basic Memory has access to create files in your home directory
+2. Ensure Claude Desktop has permission to execute the uvx command
