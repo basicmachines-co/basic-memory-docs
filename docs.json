@@ -15,7 +15,7 @@
   "logo": {
     "light": "/attachments/logo-light.png",
     "dark": "/attachments/logo-dark.png",
-    "href": "https://basicmachines.co"
+    "href": "https://basicmemory.com"
   },
   "navbar": {
     "links": [
@@ -34,7 +34,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Basic Machines",
+          "anchor": "Basic Memory",
           "icon": "globe",
           "href": "https://basicmemory.com"
         },
