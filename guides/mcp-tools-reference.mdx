@@ -190,11 +190,55 @@ write_note → edit_note (append/prepend) → move_note → view_note
 ```
 *Start with basic note, enhance incrementally, organize, then review*
 
+<details>
+<summary>Example conversation</summary>
+
+```
+You: "I want to document my thoughts on the new API design"
+Claude: I'll create a note for your API design thoughts.
+[Uses write_note to create initial note]
+
+You: "Add a section about authentication concerns"
+Claude: I'll append an authentication section to your API design note.
+[Uses edit_note with append operation]
+
+You: "This should go in my architecture folder"
+Claude: I'll move the API design note to your architecture folder.
+[Uses move_note to relocate the file]
+
+You: "Show me the final note"
+Claude: Here's your complete API design note formatted for easy reading.
+[Uses view_note to display formatted artifact]
+```
+</details>
+
 **Research and Discovery Flow:**
 ```
 search_notes → read_note → build_context → write_note
 ```
 *Find existing knowledge, explore context, create new insights*
+
+<details>
+<summary>Example conversation</summary>
+
+```
+You: "I'm working on database optimization, what have I learned before?"
+Claude: Let me search your knowledge base for database optimization content.
+[Uses search_notes to find relevant notes]
+
+You: "Tell me more about that PostgreSQL indexing note"
+Claude: I'll read the full PostgreSQL indexing note for you.
+[Uses read_note to load complete content and context]
+
+You: "Load the context from my database performance work"
+Claude: I'll gather related notes about database performance to build context.
+[Uses build_context with memory:// URLs to load related content]
+
+You: "Create a new note combining these insights for my current project"
+Claude: I'll create a comprehensive note that synthesizes your database optimization knowledge.
+[Uses write_note to capture new insights with full context]
+```
+</details>
 
 **Project Management Flow:**
 ```
@@ -202,11 +246,55 @@ list_projects → switch_project → recent_activity → get_current_project
 ```
 *Discover projects, switch context, check status, confirm active project*
 
+<details>
+<summary>Example conversation</summary>
+
+```
+You: "What projects do I have available?"
+Claude: Here are all your Basic Memory projects with their current status.
+[Uses list_projects to show available projects]
+
+You: "Switch to my work project"
+Claude: I've switched to your work project context.
+[Uses switch_project to change active project]
+
+You: "What have I been working on recently in this project?"
+Claude: Here's your recent activity in the work project.
+[Uses recent_activity to show recent changes]
+
+You: "Confirm I'm in the right project"
+Claude: You're currently in the 'work' project with 145 notes and 28 recent updates.
+[Uses get_current_project to verify active context]
+```
+</details>
+
 **Content Organization Flow:**
 ```
 list_directory → search_notes → move_note → list_directory
 ```
 *Explore structure, find content, reorganize, verify changes*
+
+<details>
+<summary>Example conversation</summary>
+
+```
+You: "Show me what's in my projects folder"
+Claude: Here's the structure of your projects folder.
+[Uses list_directory to explore folder contents]
+
+You: "Find all notes about the mobile app project"
+Claude: I found several notes related to your mobile app project.
+[Uses search_notes to locate relevant content]
+
+You: "Move the mobile app notes to a dedicated folder"
+Claude: I'll move all mobile app notes to a new 'mobile-app' folder.
+[Uses move_note to reorganize content]
+
+You: "Show me the updated folder structure"
+Claude: Here's your reorganized projects folder with the new mobile-app directory.
+[Uses list_directory to verify the changes]
+```
+</details>
 
 ### Integration Examples
 
