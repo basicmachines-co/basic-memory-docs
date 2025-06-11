@@ -27,7 +27,7 @@ Basic Memory allows you to build a knowledge graph from natural conversations wi
 - **Documentation**: [docs.memory.basicmachines.co](https://docs.memory.basicmachines.co)
 - **GitHub**: [basicmachines-co/basic-memory](https://github.com/basicmachines-co/basic-memory)
 - **PyPI**: [basic-memory](https://pypi.org/project/basic-memory/)
-- **Discord**: [Join our community](https://discord.gg/UqQHDAGMrq)
+- **Discord**: [Join our community](https://discord.gg/tyvKNccgqN)
 - **Reddit**: [r/basicmemory](https://www.reddit.com/r/basicmemory)
 
 ## Development
