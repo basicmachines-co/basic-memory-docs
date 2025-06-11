@@ -15,7 +15,7 @@
   "logo": {
     "light": "/attachments/logo-light.png",
     "dark": "/attachments/logo-dark.png",
-    "href": "https://basicmemory.com"
+    "href": "https://basicmachines.co"
   },
   "navbar": {
     "links": [
@@ -27,7 +27,7 @@
     "primary": {
       "type": "button",
       "label": "Get Started",
-      "href": "https://docs.basicmemory.com/getting-started"
+      "href": "https://memory.basicmachines.co/getting-started"
     }
   },
   "navigation": {
@@ -115,7 +115,7 @@
   },
   "footer": {
     "socials": {
-      "website": "https://basicmemory.com",
+      "website": "https://basicmachines.co",
       "github": "https://github.com/basicmachines-co/basic-memory",
       "discord": "https://discord.gg/UqQHDAGMrq",
       "reddit": "https://www.reddit.com/r/basicmemory/",

@@ -1,6 +1,6 @@
 # Basic Memory Documentation
 
-This repository contains the official documentation for [Basic Memory](https://basicmemory.com), a local-first knowledge management system that enables persistent semantic graphs through AI conversations.
+This repository contains the official documentation for [Basic Memory](https://memory.basicmachines.co), a local-first knowledge management system that enables persistent semantic graphs through AI conversations.
 
 ## About Basic Memory
 
@@ -23,8 +23,8 @@ Basic Memory allows you to build a knowledge graph from natural conversations wi
 
 ## Links
 
-- **Website**: [basicmemory.com](https://basicmemory.com)
-- **Documentation**: [docs.basicmemory.com](https://docs.basicmemory.com)
+- **Website**: [basicmachines.co](https://basicmachines.co)
+- **Documentation**: [docs.memory.basicmachines.co](https://docs.memory.basicmachines.co)
 - **GitHub**: [basicmachines-co/basic-memory](https://github.com/basicmachines-co/basic-memory)
 - **PyPI**: [basic-memory](https://pypi.org/project/basic-memory/)
 - **Discord**: [Join our community](https://discord.gg/UqQHDAGMrq)
