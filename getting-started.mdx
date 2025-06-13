@@ -74,9 +74,49 @@ The service will sync changes from your project directory in real time so they a
 To disable realtime sync, you can update the config. See [CLI Reference - sync](/guides/cli-reference#sync).
 </Note>
 
+### Choosing Where Your Notes Are Saved
+
+By default, Basic Memory saves notes to `~/basic-memory`. If you want notes saved somewhere else—like an existing note-taking folder—you can change this easily.
+
+#### Use Your Existing Notes Folder
+
+The easiest way is to ask Claude directly in your conversation:
+
+```
+Create a new project called "my project" in the "/Users/yourname/Documents/Notes" directory
+```
+
+Then:
+
+```
+Set the default project to "my project"
+```
+
+Alternatively, you can use command line tools:
+
+```bash
+# Point Basic Memory to your existing notes folder
+basic-memory project add "my project" ~/Documents/Notes
+
+# Make it your default location
+basic-memory project default "my project"
+```
+
+<Info>
+After using the command line tools, restart Claude Desktop. New notes will now be saved in your chosen folder.
+</Info>
+
+**Want to use Obsidian?** See the [Obsidian Integration guide](/integrations/obsidian) for detailed setup with existing vaults.
+
+**Need multiple note collections?** You can create different projects for work, personal, etc. See [Multi-Project Setup](#multi-project-setup) below.
+
+<Note>
+**Advanced configuration**: Basic Memory stores its settings in `~/.basic-memory/config.json`. While you can use CLI commands for most configuration (recommended), you can also edit this file directly to manage projects and settings. Changes to the config file require restarting Claude Desktop.
+</Note>
+
 ### Multi-Project Setup
 
-By default, Basic Memory creates a project in `~/basic-memory`. You can switch between projects using tools via the LLM.
+You can also work with multiple projects and switch between them using tools via the LLM.
 
 ```
 What is the default project?

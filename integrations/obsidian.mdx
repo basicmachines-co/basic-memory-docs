@@ -9,17 +9,40 @@ Basic Memory integrates seamlessly with [Obsidian](https://obsidian.md), providi
 
 ## Setup
 
-### Creating an Obsidian Vault
+### Setting Up Obsidian with Basic Memory
+
+You can either create a new vault for Basic Memory or configure Basic Memory to use your existing vault.
+
+#### Option 1: Use an Existing Obsidian Vault
+
+If you have an existing Obsidian vault where you want Basic Memory to save notes:
+
+<Steps>
+<Step title="Configure Basic Memory project">
+```bash
+# Point Basic Memory to your existing vault
+basic-memory project add main ~/path/to/your/obsidian-vault
+
+# Set it as default
+basic-memory project default main
+```
+</Step>
+<Step title="Restart Claude Desktop">
+Restart Claude Desktop for the changes to take effect
+</Step>
+<Step title="Test the integration">
+Ask Claude to create a note - it will now appear in your existing vault
+</Step>
+</Steps>
+
+#### Option 2: Create a New Vault for Basic Memory
 
 <Steps>
 <Step title="Download Obsidian">
 Download and install [Obsidian](https://obsidian.md)
 </Step>
 <Step title="Create a new vault">
-Create a new vault in Obsidian
-</Step>
-<Step title="Point to Basic Memory directory">
-Point it to your Basic Memory directory (~/basic-memory by default)
+Create a new vault in Obsidian pointing to your Basic Memory directory (~/basic-memory by default)
 </Step>
 <Step title="Enable core plugins">
 Enable core plugins like Graph View, Backlinks, and Tags
