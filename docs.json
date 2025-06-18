@@ -55,7 +55,7 @@
         },
         {
           "anchor": "PyPI",
-          "icon": "python", 
+          "icon": "python",
           "href": "https://pypi.org/project/basic-memory/"
         }
       ]
@@ -72,7 +72,8 @@
       {
         "group": "What's New",
         "pages": [
-          "whats-new"
+          "whats-new",
+          "latest-release"
         ]
       },
       {

@@ -1,0 +1,74 @@
+---
+title: "Latest Releases"
+description: "Basic Memory is updated frequently, below are notable recent changes."
+---
+
+View the latest changes to Basic Memory on [GitHub](https://github.com/basicmachines-co/basic-memory/releases)
+
+---
+
+## [v0.13.5](https://github.com/basicmachines-co/basic-memory/releases/tag/v0.13.5) — 2025-06-12
+
+**Bug Fixes**
+- MCP Tools: Renamed `create_project` tool to `create_memory_project` for namespace isolation
+- Namespace: Continued namespace isolation effort to prevent conflicts with other MCP servers
+
+**Changes**
+- Tool functionality remains identical – only the name changed from `create_project` to `create_memory_project`
+- All integration tests updated to use the new tool name
+- Completes namespace isolation for project management tools alongside `list_memory_projects`
+
+[Full Changelog](https://github.com/basicmachines-co/basic-memory/compare/v0.13.4...v0.13.5)
+
+---
+
+## [v0.13.4](https://github.com/basicmachines-co/basic-memory/releases/tag/v0.13.4) — 2025-06-12
+
+**Bug Fixes**
+- MCP Tools: Renamed `list_projects` tool to `list_memory_projects` to avoid naming conflicts with other MCP servers
+- Namespace: Improved tool naming specificity for better MCP server integration and isolation
+
+**Changes**
+- Tool functionality remains identical – only the name changed from `list_projects` to `list_memory_projects`
+- All integration tests updated to use the new tool name
+- Better namespace isolation for Basic Memory MCP tools
+
+[Full Changelog](https://github.com/basicmachines-co/basic-memory/compare/v0.13.3...v0.13.4)
+
+---
+
+## [v0.13.3](https://github.com/basicmachines-co/basic-memory/releases/tag/v0.13.3) — 2025-06-12
+
+**Bug Fixes**
+- Projects: Fixed case-insensitive project switching where switching succeeded but subsequent operations failed due to session state inconsistency
+- Config: Enhanced config manager with case-insensitive project lookup using permalink-based matching
+- MCP Tools: Updated project management tools to store canonical project names from database instead of user input
+- API: Improved project service to handle both name and permalink lookups consistently
+
+[Full Changelog](https://github.com/basicmachines-co/basic-memory/compare/v0.13.2...v0.13.3)
+
+---
+
+## [v0.13.2](https://github.com/basicmachines-co/basic-memory/releases/tag/v0.13.2) — 2025-06-11
+
+**What's Changed**
+- fix: project cli commands and case sensitivity when switching projects by @phernandez
+
+[Full Changelog](https://github.com/basicmachines-co/basic-memory/compare/v0.13.1...v0.13.2)
+
+---
+
+## [v0.13.1](https://github.com/basicmachines-co/basic-memory/releases/tag/v0.13.1) — 2025-06-11
+
+**Bug Fixes**
+- CLI: Fixed `basic-memory project` project management commands that were not working in v0.13.0
+- Projects: Resolved case sensitivity issues when switching between projects that caused "Project not found" errors
+- API: Standardized CLI project command endpoints and improved error handling
+- Core: Implemented consistent project name handling using permalinks to avoid case-related conflicts
+
+**Changes**
+- Renamed `basic-memory project sync` command to `basic-memory project sync-config` for clarity
+- Improved project switching reliability across different case variations
+- Removed redundant server status messages from CLI error outputs
+
+[Full Changelog](https://github.com/basicmachines-co/basic-memory/compare/v0.13.0...v0.13.1)
