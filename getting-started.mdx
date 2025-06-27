@@ -1,23 +1,38 @@
 ---
 title: "Getting Started"
-description: "Install Basic Memory, configure it with your AI assistant, and create your first knowledge notes"
+description: "Install Basic Memory, configure it with your AI assistant, and create your first knowledge notes."
 ---
 
-Basic Memory works through the Model Context Protocol (MCP) to connect with AI assistants like Claude. Here's how to set it up.
-
-Basic Memory uses the [Model Context Protocol](https://modelcontextprotocol.io/introduction) (MCP) to connect with LLMs.
-It can be used with any service that supports the MCP, but Claude Desktop works especially well.
+Basic Memory works through the Model Context Protocol (MCP) to connect with AI assistants like Claude Desktop, Claude Code, and Gemini CLI. Here's how to set it up.
 
 ## Installation
 
-### Prerequisites
+### Universal Installation (All Platforms)
 
-The easiest way to install basic memory is via `uv`. See the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/).
+You can install Basic Memory using `uv`, an extremely fast Python package and project manager, written in Rust.
 
+You can install `uv` from [astral's website ↗️](https://docs.astral.sh/uv/getting-started/installation/)
+
+```bash
+uv tool install basic-memory
+```
 <Warning>
 - **`uv` must be installed and available in your system PATH**. Claude Desktop runs in its own isolated environment and needs `uv` to manage dependencies.
-- **On macOS, it is recommended to install `uv` globally with Homebrew** so that Claude Desktop will detect it: `brew install uv`. Installing `uv` with other methods may not make it accessible to Claude Desktop.
 </Warning>
+
+### Homebrew Installation (macOS)
+
+The easiest way to install Basic Memory on macOS is with Homebrew:
+
+```bash
+brew tap basicmachines-co/basic-memory
+brew install basic-memory
+```
+
+<Info>
+If you use Homebrew, you do **not** need to install with `uv` or `pip` separately.
+</Info>
+
 
 ### Configure Claude Desktop
 
@@ -45,34 +60,15 @@ Edit your Claude Desktop config, located at:
 
 ![tools-menu](/attachments/claude-tools-menu.png)
 
-### Install Basic Memory (Optional)
+### Install Basic Memory Pre-releases (For Daring Adventurers)
 
 ```bash
-# Stable release (recommended)
-uv tool install basic-memory
-# or: pip install basic-memory
-
 # Beta releases (new features, testing)
 pip install basic-memory --pre
 
 # Development builds (latest changes)
 pip install basic-memory --pre --force-reinstall
 ```
-
-<Info>
-**Important**: You need to install Basic Memory using one of the commands above to use the command line tools, like import.
-</Info>
-
-Using `uv tool install` will install the basic-memory package in a standalone virtual environment. See the [UV docs](https://docs.astral.sh/uv/concepts/tools/) for more info.
-
-
-### Sync changes in real time
-
-<Note>
-The service will sync changes from your project directory in real time so they available for the AI assistant.
-
-To disable realtime sync, you can update the config. See [CLI Reference - sync](/guides/cli-reference#sync).
-</Note>
 
 ### Choosing Where Your Notes Are Saved
 
@@ -102,11 +98,11 @@ basic-memory project add "my project" ~/Documents/Notes
 basic-memory project default "my project"
 ```
 
-<Info>
-After using the command line tools, restart Claude Desktop. New notes will now be saved in your chosen folder.
-</Info>
+<Warning>
+If you change projects from the command line new notes will be saved in your chosen folder after restarting your MCP Client (e.g. Claude Desktop).
+</Warning>
 
-**Want to use Obsidian?** See the [Obsidian Integration guide](/integrations/obsidian) for detailed setup with existing vaults.
+**Want to use Obsidian?** Just open your folder location as a vault. See the [Obsidian Integration guide](/integrations/obsidian) for detailed setup with existing vaults.
 
 **Need multiple note collections?** You can create different projects for work, personal, etc. See [Multi-Project Setup](#multi-project-setup) below.
 
@@ -165,7 +161,7 @@ Set the default project used at startup.
    ---
    title: Coffee Brewing Methods
    permalink: coffee-brewing-methods
-   tags: [coffee, brewing, equipment]  # v0.13.5: Now searchable!
+   tags: [coffee, brewing, equipment]  # v0.14.0: Now searchable!
    ---
 
    # Coffee Brewing Methods
@@ -241,7 +237,7 @@ Or directly reference notes using memory:// URLs:
 You: "Take a look at memory://coffee-brewing-methods and let's discuss how to improve my technique."
 ```
 
-### Building On Previous Knowledg
+### Building On Previous Knowledge
 
 Basic Memory enables continuous knowledge building:
 
@@ -317,7 +313,7 @@ After getting started, explore these areas:
     Command line tools
   </Card>
   <Card title="OAuth Authentication" icon="shield-check" href="/integrations/oauth-setup">
-    Secure remote access (v0.13.5)
+    Secure remote access (v0.13.5+)
   </Card>
 </CardGroup>
 
@@ -328,14 +324,13 @@ To update Basic Memory when new versions are released:
 ```bash
 # Update stable release
 uv tool upgrade basic-memory
-# or: pip install --upgrade basic-memory
 
-# Update to latest beta
-pip install --upgrade basic-memory --pre
-
-# Get latest development build
-pip install --upgrade basic-memory --pre --force-reinstall
+# Homebrew
+brew upgrade basic-memory
 ```
+<Note>
+After updating, restart Claude Desktop for changes to take effect.
+</Note>
 
 <CardGroup cols={2}>
   <Card title="Fluid project switching" icon="shuffle">
@@ -351,10 +346,6 @@ pip install --upgrade basic-memory --pre --force-reinstall
     Search with frontmatter tag support
   </Card>
 </CardGroup>
-
-<Note>
-After updating, restart Claude Desktop for changes to take effect. No sync restart needed in v0.13.5.
-</Note>
 
 ## Troubleshooting Installation
 

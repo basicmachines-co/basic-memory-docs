@@ -1,9 +1,22 @@
 ---
-title: "What's New in v0.13.0"
+title: "What's New in v0.14.0"
 description: "Major release introducing multi-project management, advanced note editing, and enhanced AI collaboration workflows"
 ---
 
-Basic Memory v0.13.0 is a **major release** that transforms Basic Memory into a true multi-project knowledge management system. This release introduces fluid project switching, advanced note editing capabilities, and robust file management - all while maintaining full backward compatibility.
+Basic Memory v0.14.0 is a **major release** that transforms Basic Memory into a true remote MCP Server and is ready for your advanced agentic workflows.
+
+This also improves the multi-project knowledge management system's fluid project switching, advanced note editing capabilities, and robust file management with numerous bug fixes.
+
+## 💻 Docker Support
+
+**Run Basic Memory in Docker Desktop or your own container runtime:**
+
+Update the docker-compose.yml to set the path to your knowledge folder and then:
+```
+$ docker-compose up
+```
+
+Basic Memory now supports SSE and can be used with [n8n ↗️](https://n8n.io) workflows.
 
 ## 🎯 Multi-Project Management
 
@@ -16,7 +29,7 @@ You: "What projects do I have?"
 
 Claude: Available projects:
 • main (current, default) - 127 entities, 340 observations
-• work-notes - 89 entities, 245 observations  
+• work-notes - 89 entities, 245 observations
 • creative-writing - 34 entities, 156 observations
 • research-papers - 67 entities, 189 observations
 
@@ -26,7 +39,7 @@ Claude: ✓ Switched to creative-writing project
 
 Project Summary:
 • 34 entities (characters, plots, themes)
-• 156 observations  
+• 156 observations
 • 23 relations
 • Last updated: 2 hours ago
 
@@ -80,7 +93,7 @@ Claude: [Uses edit_note with append operation]
 
 ## Action Items - January 15, 2025
 - [ ] Sarah: Update API documentation by Friday
-- [ ] Mike: Review security implementation 
+- [ ] Mike: Review security implementation
 - [ ] Team: Prepare demo for client meeting next week
 - [ ] Jenny: Coordinate user testing sessions
 
@@ -113,7 +126,7 @@ Claude: [Uses prepend to add newest entry at top]
 
 ## January 15, 2025 - React Performance Insights
 - [discovery] useMemo doesn't help with props.children changes #react-gotcha
-- [technique] React.Children.count for shallow comparison #workaround  
+- [technique] React.Children.count for shallow comparison #workaround
 - [pattern] Custom hooks for complex state logic #architecture
 
 [New entry added above previous entries, maintaining chronological order]
@@ -161,7 +174,7 @@ Found and replaced 3 occurrences of "v0.12.0" with "v0.13.0"
 
 Changes made:
 - Line 23: Version requirement updated
-- Line 45: Docker image tag updated  
+- Line 45: Docker image tag updated
 - Line 67: Example configuration updated
 ```
 
@@ -192,7 +205,7 @@ You: "Move my AI research notes into a dedicated ai-research folder"
 Claude: [Creates folder structure and moves files]
 ✓ Created folder: ai-research/
 ✓ Moved 12 AI-related notes:
-- neural-networks.md → ai-research/neural-networks.md  
+- neural-networks.md → ai-research/neural-networks.md
 - transformer-architecture.md → ai-research/transformer-architecture.md
 - ai-ethics-considerations.md → ai-research/ethics/ai-ethics-considerations.md
 
@@ -284,7 +297,7 @@ You: "Search for all my chemex notes"
 Claude: [Finds notes with 'chemex' in tags or content]
 Found 4 notes mentioning 'chemex':
 • Coffee Brewing Methods (tag match)
-• Morning Routine - Coffee Setup (content match)  
+• Morning Routine - Coffee Setup (content match)
 • Kitchen Equipment Reviews (tag match)
 • Weekend Coffee Experiments (content match)
 ```
@@ -316,7 +329,7 @@ You: "Search for 'authentication' in my work project only"
 Claude: [Searches within current work project]
 Found 6 authentication-related notes in work-notes project:
 • API Authentication Strategy
-• OAuth Implementation Guide  
+• OAuth Implementation Guide
 • Security Review - Auth System
 • User Session Management
 • Password Reset Flow
@@ -373,7 +386,7 @@ You don't need to manually switch projects - Basic Memory handles this for you.
 You: "Switch to work-notes project"
 Claude: ✓ Switched to work-notes
 
-You: "Search for client information"  
+You: "Search for client information"
 Claude: [Searches only within work-notes project]
 Found 3 client-related notes in work-notes:
 • Client Requirements Document
@@ -394,7 +407,7 @@ list_projects()
 → Shows: main (default, current), work-notes, personal-journal
 
 # Switch project context
-switch_project("work-notes") 
+switch_project("work-notes")
 → Changes active project for all subsequent operations
 
 # Get current project info
@@ -416,7 +429,7 @@ edit_note("meeting-notes", "append", "\n## New Action Items\n- Task 1\n- Task 2"
 # Prepend timestamp
 edit_note("journal", "prepend", "# January 15, 2025\nToday's insights...")
 
-# Replace specific section  
+# Replace specific section
 edit_note("api-docs", "replace_section", "New deployment steps...", section="## Deployment")
 
 # Find and replace with validation
@@ -457,7 +470,7 @@ Claude: [Creates structured standup note]
 
 ## Team Updates
 - Sarah: Completed user authentication module, starting on password reset
-- Mike: Fixed payment processing bug, investigating performance issues  
+- Mike: Fixed payment processing bug, investigating performance issues
 - Jenny: Client demo went well, gathering requirements for Phase 2
 
 ## Blockers
@@ -493,7 +506,7 @@ Claude: [Creates comprehensive research note]
 
 ## Relations
 - revolutionizes [[Natural Language Processing]]
-- enables [[Large Language Models]]  
+- enables [[Large Language Models]]
 - influences [[Computer Vision - Vision Transformers]]
 
 [Automatically connects to existing AI research and methodology notes]

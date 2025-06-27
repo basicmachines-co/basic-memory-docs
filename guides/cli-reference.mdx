@@ -1,6 +1,6 @@
 ---
 title: "CLI Reference"
-description: "Complete command line reference for Basic Memory including auth, sync, import, project management, and tool commands"
+description: "Complete command line reference for Basic Memory including auth, import, project management, and tool commands"
 ---
 
 ## Core Commands
@@ -77,9 +77,6 @@ You can also manage projects within an LLM chat via mcp tools.
 All commands support the `--project` flag to specify which project to use:
 
 ```bash
-# Sync a specific project
-basic-memory --project=work sync
-
 # Run MCP server for a specific project
 basic-memory --project=personal mcp
 ```
@@ -108,45 +105,6 @@ basic-memory --help
 <Warning>
 You need to install Basic Memory via `uv` or `pip` to use the command line tools. See the [Getting Started guide](/getting-started) for installation instructions.
 </Warning>
-
-### sync
-
-Keeps files and the knowledge graph in sync:
-
-<Info>
-Changes sync automatically - no manual sync required.
-</Info>
-
-```bash
-# Basic sync
-basic-memory sync
-
-# Watch for changes
-basic-memory sync --watch
-
-# Show detailed sync information
-basic-memory sync --verbose
-```
-
-**Options:**
-- `--watch`: Continuously monitor for changes
-- `--verbose`: Show detailed output
-
-<Note>
-As of the v0.12.0 release syncing will occur in real time when the mcp process starts.
-- The real time sync means that it is no longer necessary to run the `basic-memory sync --watch` process in a terminal to sync changes to the db (so the AI can see them). This will be done automatically.
-
-This behavior can be changed via the config. The config file for Basic Memory is in the home directory under `.basic-memory/config.json`.
-
-To change the properties, set the following values:
-```json
-~/.basic-memory/config.json
-{
-  "sync_changes": false,
-}
-```
-</Note>
-
 
 ## Using stdin with Basic Memory's `write_note` Tool
 
@@ -256,5 +214,6 @@ If import fails:
 If status shows problems:
 
 1. Note any unresolved relations or warnings
-2. Run a full sync to attempt automatic resolution
+2. Restart your MCP Client (e.g. Claude Desktop)
 3. Check file permissions if database access errors occur
+4. If the errors continue please contact us and we will fix it
