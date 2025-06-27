@@ -72,7 +72,7 @@ pip install basic-memory --pre --force-reinstall
 
 ### Choosing Where Your Notes Are Saved
 
-By default, Basic Memory saves notes to `~/basic-memory`. If you want notes saved somewhere else—like an existing note-taking folder—you can change this easily.
+By default, Basic Memory saves notes in a project called `main` in `~/basic-memory`. If you want notes saved somewhere else—like an existing note-taking folder—you can change this easily.
 
 #### Use Your Existing Notes Folder
 
@@ -92,14 +92,14 @@ Alternatively, you can use command line tools:
 
 ```bash
 # Point Basic Memory to your existing notes folder
-basic-memory project add "my project" ~/Documents/Notes
+basic-memory project add "my project" <path to your project>
 
 # Make it your default location
 basic-memory project default "my project"
 ```
 
 <Warning>
-If you change projects from the command line new notes will be saved in your chosen folder after restarting your MCP Client (e.g. Claude Desktop).
+If you change default projects from the command line new notes will be saved in your chosen folder after restarting your MCP Client (e.g. Claude Desktop).
 </Warning>
 
 **Want to use Obsidian?** Just open your folder location as a vault. See the [Obsidian Integration guide](/integrations/obsidian) for detailed setup with existing vaults.
@@ -129,7 +129,6 @@ Will create a note in the "work notes" project, while leaving the current projec
 switch to the "recipies" project
 ```
 Switch to a project and make it active.
-
 
 ```
 set the default project to "work notes"
